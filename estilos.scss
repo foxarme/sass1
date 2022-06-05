@@ -1,0 +1,342 @@
+*{
+    box-sizing: border-box;
+    min-height: auto;
+    
+}
+
+#grid-area {
+    font-family: sans-serif;
+    display: grid;
+    gap: 0px;
+    grid-template-areas:
+        "logo logo logo"
+        "menu menu menu"
+        "info1 info1 banner"
+        "info1 info1 banner"
+        "redes redes redes";
+        height: auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background: rgb(191, 194, 187);
+}
+
+header {
+    background: orange;
+    grid-area: logo;
+    position: sticky;
+    top: 0;
+}
+
+nav, menu {
+    background: rgb(191, 194, 187);
+    grid-area: menu;
+}
+
+main {
+    display: flex;
+    background: skyblue;
+    grid-area: info1;
+    align-self: stretch;
+}
+
+aside {
+    background: rgb(191, 194, 187);
+    grid-area: banner;
+    align-items: center;
+    width: auto;
+    height: auto;
+    
+}
+
+footer {
+    background: rgb(191, 194, 187);
+    grid-area: redes;
+    
+    
+   
+}
+
+
+.body{
+    min-height: 100vh;
+    max-width: 400px;
+    margin: auto;
+}
+
+.fondo__body{
+    background: url(../imagenes/fondo-trabajo.png); 
+    background-size: cover  ;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: rgb(44, 63, 5);
+    font-size: 45px;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+#encabezado{
+    background-color: #e6f0f0;
+    display: flexbox;
+}
+
+#encabezado{
+     .logo{
+    height: auto;
+    width: auto;
+    }
+}
+
+.menu {
+    ul{
+         li{
+              a{
+                text-decoration: none;
+                text-align: center;
+                color: rgb(134, 76, 72);
+                text-align: center;
+              }
+         }
+    }
+}
+
+.menu__vertical {
+                ul{
+                     li{
+                          a{
+
+                            text-decoration: none;
+                            text-align: center;
+                            color: rgb(134, 76, 72);
+                            text-align: center;
+                          }
+                        }
+                    }
+
+}
+
+.contacto__imagen__fondo {
+    background-image: url("../imagenes/fondo3\ servicios\ graficos.jpg"); 
+    background-size:cover;
+    opacity: .8;
+    border: 0px;
+    margin: 0px;
+    padding: 10px 10px 40px 40px;
+}
+
+
+#calendarios__fotos tr{
+    display: inline;
+}
+
+.flex-container-calendario{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:stretch;
+}
+
+.flex-item-calendario{
+    border: 4px solid black;
+    width: 350px;
+    height: auto;
+    background-color: beige;
+    text-align: center;
+    font-size: medium;
+}
+
+.flex-item-calendario img{
+    width: 100%;
+    background-color: black ;
+    padding: 10px;
+}
+
+.calendarios__foto__fondo{
+    background-image: url(../imagenes/pelosdecolores.png);
+    background-size: cover;
+    height: 900px;
+    opacity: 1;
+    height: max-content;
+}
+
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:400px; 
+    position:relative;
+    height:0;
+    
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    
+}
+
+@media (max-width: 767px) {
+
+    #grid-area {
+        font-family: sans-serif;
+        display: grid;
+        gap: 0px;
+        grid-template-areas:
+            "logo "
+            "menu "
+            "info1 "
+            "banner"
+            "redes";
+            height: auto;
+        grid-template-columns: 1fr  ;
+        align-items: center;
+        background: rgb(191, 194, 187);
+    }
+    .menu input + ul {
+        display: none;
+        
+    }
+    
+    .menu input:checked + ul {
+        display: block;
+    }
+    
+    .menu__vertical input + ul {
+        display: none;
+    }
+    
+    .menu__vertical input:checked + ul {
+        display: block;
+    }
+    
+    #grid-area{
+        display: block;
+        margin: 5px;
+    }
+    
+    .grid-gallery{
+        display: block;
+        margin: 5px;
+        gap: 2px;
+    }
+
+    .aside{
+        flex: content;
+    }
+    
+    .menu{
+            ul{
+                list-style: none;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: 15px;
+                color: beige;
+                background-color: rgb(155, 147, 111);
+                gap: 10px;
+                
+            }
+        }
+
+    
+    .menu__vertical {
+                    ul{
+                    list-style: none;
+                    text-decoration: none;
+                    font-family: sans-serif;
+                    font-size: 15px;
+                    color: beige;
+                    background-color: rgb(155, 147, 111);
+                    gap: 10px;
+                    }
+    }
+
+    #servicios__graficos__texto__fondo{
+        text-align: left;
+        color: black;
+        font-size: 25px;
+        font-style: italic;
+    }
+    .servicios__graficos__imagen__fondo{
+        background-image: url("../imagenes/fondo1-servicios-graficos-taza.png");
+        opacity: 1;
+        background-size: cover;
+        display: flexbox;
+    }
+        
+}
+
+@media (min-width: 768px) {
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        nav{
+            ul {
+                gap: 30px;
+            }
+        }
+    }
+
+    .menu input {
+        display: none;
+    }
+
+    .menu__vertical input {
+        display: none;
+    }
+
+    .menu{
+         ul{
+            list-style: none;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 30px;
+            color: beige;
+            background-color: rgb(155, 147, 111);
+            display: flex;
+            gap: 10px;
+         }
+    }
+
+    .menu__vertical{
+         ul{
+            list-style: none;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 30px;
+            color: beige;
+            background-color:rgb(155, 147, 111);
+            gap: 10px;
+         }
+    }
+
+    #servicios__graficos__texto__fondo{
+        text-align: left;
+        color: black;
+        font-size: 50px;
+        font-style: italic;
+        font-family: sans-serif;
+        margin-right: 50%;
+        margin-left: 15px;
+    }
+
+    .servicios__graficos__imagen__fondo{
+        background-image: url("../imagenes/fondo1-servicios-graficos-taza.png");
+        opacity: 1;
+        background-size: cover;
+        display: flexbox;
+        
+    }
+
+    .servgraficos__parrafo{
+        font-size: 25px;
+    }
+        
+    
+}
